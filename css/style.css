@@ -8,13 +8,13 @@ body{
     font-family: Whitney, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
- /* FUNZIONALITÀ */
+ /* !FUNZIONALITÀ */
 
 :root{
     --grigio-0: rgb(50, 50, 50);
     --grigio-1: rgb(100, 100, 100);
     --grigio-2: rgb(150, 150, 150);
-    --grigio-3: rgb(200, 200, 200);
+    --grigio-3: #cccccc;
     --grigio-4: rgb(250, 250, 250);    
 }
 
@@ -25,10 +25,6 @@ body{
 
 .flex{
     display: flex;
-}
-
-a{
-    text-decoration: none;
 }
 
 .button:hover{
@@ -58,6 +54,32 @@ a{
 .large.button.black{
     background-color: #23272a;
     color: white;
+}
+
+/* ! TAG SINGOLI */
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 55px;
+}
+
+h2{
+    font-size: 48px;
+}
+
+h4{
+    font-size: 32px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+p{
+    line-height:  1.6;
+    font-size: 20px;
+    margin: 40px 0;
 }
 
 /* HEADER */
@@ -111,44 +133,67 @@ nav > div, .footer-bottom > div{
     text-align: center;
 }
 
-h1{
-    font-size: 55px;
-}
-
-p{
-    line-height:  1.6;
-    font-size: 20px;
-    margin: 40px 0;
-}
-
-/* MAIN */
+/* !INIZIO MAIN */
 
 main > div:nth-of-type(even){
-    background-color: var(--grigio-1);
+    background-color: var(--grigio-3);
 }
 
-main > div{
-    padding: 60px 0;
-    height: 600px;
+main > div:not(:last-child){  /*tutti i div primogeniti di main tranne l'ultimo*/
+    padding: 80px 0;
+    height: 800px;
+}
+
+.wave{
+    display: block;
+    height: 100px;
+    background-image: url(../img/wave.svg);
+    opacity: 0.2;
+}
+
+.wave.upside-down{
+    rotate: 0.5turn;
 }
 
 .card{
     height: 100%;
 }
 
-.img{
+.card-img img{
+    width: 700px;
+}
+
+
+.card-img{
+    vertical-align: center;
+    flex-direction: column;
+    justify-content: center;
     flex-basis: 60%;
-    background-color: var(--grigio-2);
 }
 
 .description{
     flex-basis: 40%;
-    background-color: var(--grigio-3);
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
 }
 
-.bottom.card{
-    height: 500px;
-    background-color: var(--grigio-2);
+.bottom-card{
+    text-align: center;
+    padding: 70px;
+}
+
+.bottom-card img{
+    width: 100%;
+}
+
+.main-bottom{
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-bottom img{
+    width: 650px;
 }
 
 /* FOOTER */
