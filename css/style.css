@@ -3,7 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: Whitney, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
  /* FUNZIONALITÀ */
+
 :root{
     --grigio-0: rgb(50, 50, 50);
     --grigio-1: rgb(100, 100, 100);
@@ -13,52 +19,106 @@
 }
 
 .center{
-    max-width: 1080px;
+    max-width: 1180px;
     margin: auto;
 }
 
 .flex{
     display: flex;
 }
-/* ! */
-/* .logo, .button{ 
-    flex-basis: 25%;
-    background-color: var(--grigio-3);
-} */
+
+a{
+    text-decoration: none;
+}
+
+.button:hover{
+    color: #255ee9;
+    opacity: 0.9;
+    box-shadow: 0 5px 20px black;
+}
+
+.button{
+    background-color: white;
+    color: black;
+}
+
+.small.button{
+    border-radius: 40px;
+    font-size: 14px;
+    padding: 7px 16px;
+}
+
+.large.button{
+    margin: 0 10px;
+    border-radius: 28px;
+    font-size: 20px;
+    padding: 16px 32px;
+}
+
+.large.button.black{
+    background-color: #23272a;
+    color: white;
+}
 
 /* HEADER */
 header{
-    background-color: var(--grigio-0);
-    height: 500px;
+    background-color: #255ee9;
+    color: white;
 }
 
 nav{
     align-items: center;
     height: 80px;
-    border: 2px solid white;
 }
 
 nav > div, .footer-bottom > div{
-    padding: 10px;
     flex-basis: 25%;
-    background-color: var(--grigio-1);
 }
 
-.flex .button{
+.flex .login{
     text-align: right;
 }
 
 .flex .links{
     flex-grow: 1;
     text-align: center;
-    background-color: var(--grigio-2);
 }
 
-nav + div{
-    background-color: var(--grigio-2);
-    max-width: 700px;
+.links a:hover{
+    text-decoration: underline;
+}
+
+
+.links a{
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.jumbotron.flex{
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/jumbo.png);
+    background-size: cover;
+    height: 500px;
+}
+
+.content{
+    flex-basis: 750px;
     height: 300px;
-    margin: 50px auto;
+    text-align: center;
+}
+
+h1{
+    font-size: 55px;
+}
+
+p{
+    line-height:  1.6;
+    font-size: 20px;
+    margin: 40px 0;
 }
 
 /* MAIN */
